@@ -33,9 +33,9 @@ router.post('/error', async(req, res) => {
 });
 
 router.get('/invite', (req, res) => 
-  res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.dashboardURL}/dashboard&permissions=2065&scope=bot`));
+  res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.dashboardURL}/dashboard&permissions=2065&scope=bot`));
 
 router.get('/login', (req, res) =>
-  res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.api.url}/auth&response_type=code&scope=identify&guilds&prompt=none`));
+  res.redirect(`https://discord.com/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.api.url}/auth&response_type=code&scope=identify&guilds&prompt=none`));
 
 router.get('*', (req, res) => sendError(res, 404, new TypeError('Not found.')));
